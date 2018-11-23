@@ -1,6 +1,6 @@
 FROM ubuntu:bionic as builder
 
-MAINTAINER Peter Evans <pete.evans@gmail.com>
+MAINTAINER Frank Kanzler <frank.kanzler@gmail.com>
 
 ENV NOMINATIM_VERSION 3.2.0
 
