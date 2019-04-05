@@ -7,7 +7,9 @@ Dockerfile for nominatim geocoding service (openstreetmaps). Uses nominatim 3.2 
 
 2. Initialize Nominatim Database
 
-Please note that initialization may take a while, depending on the amount of data you want to import.
+Default data is germany.osm.pbf. To import different data read on.
+
+Please note that initialization may take a while, depending on the amount of data you want to import (took 3 days on my server for germany).
 
     docker run -d -v data:/var/lib/postgresql/10/main -e NOMINATIM_MODE=CREATE --name nominatim-create nominatim
 
