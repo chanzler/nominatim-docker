@@ -5,9 +5,7 @@ Dockerfile for nominatim geocoding service (openstreetmaps). Uses nominatim 3.2 
 
     docker build -t nominatim .
 
-2. Copy <your_country>.osm.pbf to a local directory (i.e. /home/me/nominatimdata)
-
-3. Initialize Nominatim Database
+2. Initialize Nominatim Database
 
 Please note that initialization may take a while, depending on the amount of data you want to import.
 
@@ -21,6 +19,6 @@ If you want to import a different country than germany, you can specify the down
 
     docker run -d -v data:/var/lib/postgresql/10/main -e NOMINATIM_PBF_URL=http://download.geofabrik.de/asia/maldives-latest.osm.pbf -e NOMINATIM_MODE=CREATE --name nominatim-create  nominatim
 
-4. Run 
+3. Run 
 
     docker run -d -p 8080:8080 -v data:/var/lib/postgresql/10/main --restart=always --name nominatim nominatim
